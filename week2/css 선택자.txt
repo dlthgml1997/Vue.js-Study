@@ -1,0 +1,34 @@
+A B = A 안에 있는 B
+
+A 옆 B = A~ B 
+
+A + B = B next to A  
+
+A > B = A 의 직속(바로 아래) 자식
+
+:first-child = 첫번째 child
+
+:only-child = 외동 child
+
+:last-child = 마지막 child
+
+:nth-child(3) = child 중 3번째
+
+:nth-last-child(3) = child 중 뒤에서 3번째
+
+:first-of-type = type의 첫번 째
+
+:nth-of-type(even) = type의 짝수번 째
+
+:nth-of-type(2n+3) = 3번째 부터 시작해서 2n마다
+
+apple plate: only-of-type  = apple on the plate인 type
+
+:last-of-type = type의 마지막
+
+:empty = 비어있는 것
+
+:not(X) = X가 아닌 것
+
+
+
