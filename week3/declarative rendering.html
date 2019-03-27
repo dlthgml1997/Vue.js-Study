@@ -28,11 +28,19 @@
     <p> {{message}} </p>
     <button v-on:click="reverseMessage">메시지 뒤집기</button>
 </div>
-<div id="app-6">
-    <p> {{message }}</p>
-    <input v-model="message">
+<div id="app-6"> <!-- 사용자 입력 핸들링 : 양방향 바인딩-->
+    <p> {{ message }}</p>
+    <input v-model="message"> 
 </div>
-
+<div id= "app-7">
+<ol>
+    <todo-item
+    v-for="item in groceryList"
+    v-bind:todo="item"
+    v-bind:key="item.id">
+</todo-item>
+</ol>
+</div>
 </body>
 <script> // javaScript 콘솔
         var app = new Vue({
@@ -44,10 +52,9 @@
         var app2 = new Vue({
             el: '#app-2',
             data: {
-                message: '이 페이지는' + new Date() +' 에 로드 되었습니다'
+                message: '이 페이지는 ' + new Date() +' 에 로드 되었습니다'
             }
         })
-        app2.message ='새로운 메시지'
         var app3 = new Vue({
             el: '#app-3',
             data : {
@@ -81,6 +88,21 @@
             el: '#app-6',
             data: {
                 message: '안녕하세요 Vue!'
+            }
+        })
+
+        Vue.component('todo-item',{
+            props: ['todo'], // 부모 영역의 데이터를 자식 컴포넌트에 집어 넣기 위해
+            template: '<li>{{ todo.text }}</li>'
+        })
+        var app7 = new Vue({
+            el: '#app-7',
+            data: {
+                groceryList: [
+                    {id: 0 , text: 'Vegetables'},
+                    {id: 1, text: 'Cheese'},
+                    {id:2,text: "Whatever else humans are supposed to eat"}
+                ]
             }
         })
         

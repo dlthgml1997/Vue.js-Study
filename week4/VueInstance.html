@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>View Instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app-1">
+        <p>{{ foo }}</p>
+        <!-- freeze를 했기 때문에 바뀌지 않는다-->
+        <button v-on:click="foo= baz"> 메시지 바꾸기 </button>
+    </div>
+</body>
+<script>
+    var data = { a: 1 }
+    var vm = new Vue({
+        el: '#example',
+        data: data
+    })
+
+    vm.$data === data 
+    vm.$el === document.getElementById('example')
+    //watch 는 인스턴스 메소드
+    vm.$watch('a',function(newVal,oldVal){
+        //vm.a가 변경되면 호출된다
+    })
+
+    //같은 객체를 참조
+    vm.a === data.a //true ===세개는 타입까지 체크해준다
+    vm.a = 3
+    data.a //3
+
+    var obj = {
+        foo: bar
+    }
+
+    Object.freeze(obj)
+    var app1 = new Vue({
+        el: '#app-1',
+        data: obj
+    })
+
+    new Vue({
+        data: {
+            a:1
+        },
+        // created 라이프 사이클 훅 : 인스턴스가 생성된 후에 호출됨
+        created: function () { 
+            console.log('a is: ' + this.a)
+        }
+    })
+
+
+
+</script>
+
+</html>
