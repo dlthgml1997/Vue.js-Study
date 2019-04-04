@@ -5,7 +5,7 @@ css 적용해보기<br>
 ### week1<br>
 자바스크립트와 css 복습<br>
 ### week2<br>
-css 생성자 게임 및 공부 정리 (참고: https://flukeout.github.io/)<br>
+css 생성자/ 게임 및 공부 정리 (참고: https://flukeout.github.io/)<br>
 ### week3<br>
    * 선언적 렌더링
    * 조건문과 반복문
