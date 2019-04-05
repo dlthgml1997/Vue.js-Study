@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>component Practice</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id= "app">
+        <header>
+            <h3>{{ message }}</h3>
+            <todo-footer></todo-footer>
+            <todo-list></todo-list>
+        </header>
+    </div>
+</body>
+<script>
+
+    Vue.component('todo-footer',{
+        template: '<div>This is another global child component</div>'
+    });
+
+    var app = new Vue({
+        el: '#app',
+        data :{
+            message : 'This is a paremt component'
+        }
+    });
+    
+    var cmp= {
+        template : '<div> This is another local child component</div>'
+        };
+    new Vue({
+        el: '#app',
+        components: {
+            'todo-list' : cmp 
+        }
+    });
+</script>
+</html>
