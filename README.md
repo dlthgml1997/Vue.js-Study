@@ -24,3 +24,10 @@ css 생성자/ 게임 및 공부 정리 (참고: https://flukeout.github.io/)<br
    * 컴포넌트 간의 통신 (이미지 출처: [구글 이미지](https://cdn-images-1.medium.com/max/790/0*Xzkw0-T4Uea3d5Yh.png))
    ![image](https://user-images.githubusercontent.com/18275619/55624975-6cbc0e80-57e2-11e9-845a-b437f686421d.png)
    
+### week6<br>
+   * EventBus<br>
+      : 같은 컴포넌트 레벨 간의 통신<br>
+      : 보내는 컴포넌트에서는 $emit(), 받는 컴포넌트에서는 $on()을 구현합니다.<br>
+   * Vue Router
+
+   
