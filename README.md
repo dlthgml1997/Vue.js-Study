@@ -30,4 +30,9 @@ css 생성자/ 게임 및 공부 정리 (참고: https://flukeout.github.io/)<br
       : 보내는 컴포넌트에서는 $emit(), 받는 컴포넌트에서는 $on()을 구현합니다.<br>
    * Vue Router
 
+### week7<br>
+   * Axios<br>
+     : 액시오스는 Promise 기반의 API형식(데이터를 요청하고 받아 올 때 까지 기다렸다가 화면에 나타내는 로직을 실행해야 할 때 주로 활용됨)으로 되어있다.
+   * Axios vs Vue Resource<br>
+     : 액시오스의 경우 data 속성이 일반 문자열 형식이 아니라 객체 형태이기 때문에 별도로 JSON.parse()를 사용하여 객체로 변환할 필요가 없습니다.
    
